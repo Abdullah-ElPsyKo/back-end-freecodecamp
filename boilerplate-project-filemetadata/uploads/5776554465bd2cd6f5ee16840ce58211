@@ -1,0 +1,37 @@
+Using module.exports and require in CommonJS:
+
+module.exports = Logger;
+const Logger = require('./logger.js');
+
+const log = new Logger('test');
+log.info('test');
+
+
+
+Using export and import in ES6 modules:
+
+export default class Logger {}
+import Logger from './logger.js';
+
+const log = new Logger('test');
+log.info('test');
+
+
+
+Using export and import in ES6 modules, and exporting multiple values:
+
+export { Logger };
+import { Logger } from './logger.js';
+
+const log = new Logger('test');
+log.info('test');
+
+
+
+Using export and import in ES6 modules, and aliasing the imported value:
+
+export default class Logger {}
+import MyLogger from './logger.js';
+
+const log = new MyLogger('test');
+log.info('test');
